@@ -1,4 +1,3 @@
-/* Bước 3 (trang 93) & Bước 5 (trang 94) */
 #shark {
     left: 100px;
     top: 400px;
@@ -11,13 +10,29 @@
     animation-play-state: running;
 }
 
-/* Bước 4 (trang 94) - Đây là phần quan trọng nhất */
 @keyframes Shark {
-    0%   {left:100px; top:400px;}
-    20%  {left:300px; top:400px;}
-    40%  {left:500px; top:300px;}
-    50%  {left:600px; top:50px;}
-    60%  {left:600px; top:200px;}
-    80%  {left:500px; top:200px;}
-    100% {left:100px; top:400px; transform:scaleX(-1);}
+    0% {
+        left: 100px;
+        transform: scaleX(1);
+    }
+    
+    49.9% {
+        left: calc(100vw - 250px); 
+        transform: scaleX(1);
+    }
+
+    50% {
+        left: calc(100vw - 250px); 
+        transform: scaleX(-1);
+    }
+    
+    99.9% {
+        left: 100px;
+        transform: scaleX(-1);
+    }
+
+    100% {
+        left: 100px;
+        transform: scaleX(1);
+    }
 }
