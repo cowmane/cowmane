@@ -1,7 +1,10 @@
+body {
+    overflow: hidden;
+}
+
 #shark {
     top: 50vh; 
     position: absolute;
-    
     animation-name: Shark;
     animation-duration: 10s;
     animation-timing-function: linear;
@@ -10,28 +13,90 @@
 }
 
 @keyframes Shark {
-    0% {
-        left: 5vw;
-        transform: scaleX(1);
-    }
-    
-    49.9% {
-        left: calc(95vw - 250px); 
-        transform: scaleX(1);
-    }
+    0% { left: 5vw; transform: scaleX(1); }
+    49.9% { left: calc(95vw - 250px); transform: scaleX(1); }
+    50% { left: calc(95vw - 250px); transform: scaleX(-1); }
+    99.9% { left: 5vw; transform: scaleX(-1); }
+    100% { left: 5vw; transform: scaleX(1); }
+}
 
-    50% {
-        left: calc(95vw - 250px); 
-        transform: scaleX(-1);
-    }
-    
-    99.9% {
-        left: 5vw;
-        transform: scaleX(-1);
-    }
+#turtle {
+    top: 70vh;
+    position: absolute;
+    animation-name: TurtleSwim;
+    animation-duration: 20s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+}
 
-    100% {
-        left: 5vw;
-        transform: scaleX(1);
-    }
+@keyframes TurtleSwim {
+    0% { left: calc(95vw - 150px); transform: scaleX(-1); }
+    49.9% { left: 5vw; transform: scaleX(-1); }
+    50% { left: 5vw; transform: scaleX(1); }
+    99.9% { left: calc(95vw - 150px); transform: scaleX(1); }
+    100% { left: calc(95vw - 150px); transform: scaleX(-1); }
+}
+
+#diver1 {
+    top: 10vh;
+    left: 10vw;
+    position: absolute;
+    animation-name: DiveUpDown;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#diver2 {
+    top: 15vh;
+    left: 40vw;
+    position: absolute;
+    animation-name: DiveUpDown;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-delay: -3s;
+}
+
+#diver3 {
+    top: 12vh;
+    left: 70vw;
+    position: absolute;
+    animation-name: DiveUpDown;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-delay: -1s;
+}
+
+@keyframes DiveUpDown {
+    from { transform: translateY(0); }
+    to { transform: translateY(40px); }
+}
+
+#faintSchool {
+    top: 20vh;
+    position: absolute;
+    animation-name: SwimAcross;
+    animation-duration: 25s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-delay: -5s;
+    z-index: -1;
+}
+
+#goldFishSchool {
+    top: 25vh;
+    position: absolute;
+    animation-name: SwimAcross;
+    animation-duration: 30s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    z-index: -1;
+}
+
+@keyframes SwimAcross {
+    0% { left: -300px; }
+    100% { left: 100vw; }
 }
