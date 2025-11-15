@@ -1,6 +1,5 @@
 #shark {
-    left: 100px;
-    top: 400px;
+    top: 50vh; 
     position: absolute;
     
     animation-name: Shark;
@@ -12,27 +11,27 @@
 
 @keyframes Shark {
     0% {
-        left: 100px;
+        left: 5vw;
         transform: scaleX(1);
     }
     
     49.9% {
-        left: calc(100vw - 250px); 
+        left: calc(95vw - 250px); 
         transform: scaleX(1);
     }
 
     50% {
-        left: calc(100vw - 250px); 
+        left: calc(95vw - 250px); 
         transform: scaleX(-1);
     }
     
     99.9% {
-        left: 100px;
+        left: 5vw;
         transform: scaleX(-1);
     }
 
     100% {
-        left: 100px;
+        left: 5vw;
         transform: scaleX(1);
     }
 }
